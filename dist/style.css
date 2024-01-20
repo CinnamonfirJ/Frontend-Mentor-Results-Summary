@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url(../../../assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+p {
+  margin: 0 0;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Hanken Grotesk";
+  line-height: 1.1;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-red-100: hsla(0, 100%, 67%, 0.05);
+  --Orangey-yellow-100: hsla(39, 100%, 56%, 0.1);
+  --Green-teal-100: hsla(166, 100%, 37%, 0.1);
+  --Cobalt-blue-100: hsla(234, 85%, 45%, 0.1);
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+.score-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--Light-slate-blue);
+  background: -webkit-linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+@media screen and (min-width: 723px) {
+  .score-card {
+    width: 362px;
+    height: 514px;
+    border-radius: 2rem;
+  }
+}
+.score-card .results {
+  margin: 27px;
+}
+.score-card .results.results p {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--White);
+}
+
+.score-card .score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  background: var(--Violet-blue);
+  background: -webkit-linear-gradient(var(--Violet-blue), var(--Persian-blue));
+}
+.score-card .score.score span {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--White);
+}
+.score-card .score.score p {
+  font-weight: 500;
+  color: var(--Light-lavender);
+}
+
+@media screen and (min-width: 723px) {
+  .score-card .score {
+    width: 200px;
+    height: 200px;
+  }
+}
+.score-card .remark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.score-card .remark.remark h2 {
+  font-weight: 700;
+  color: var(--White);
+}
+.score-card .remark.remark p {
+  padding: 20px 30px 32px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--Light-lavender);
+}
+
+@media screen and (min-width: 723px) {
+  .score-card .remark {
+    padding: 20px 30px 12px;
+  }
+}
+.summary-card {
+  width: 362px;
+  padding: 30px;
+  gap: 0.5rem;
+}
+
+.summary-title {
+  font-weight: 700;
+}
+
+.summary-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.summary-tab-1 {
+  background: var(--Light-red-100);
+}
+
+.summary-tab-2 {
+  background: var(--Orangey-yellow-100);
+}
+
+.summary-tab-3 {
+  background: var(--Green-teal-100);
+}
+
+.summary-tab-4 {
+  background: var(--Cobalt-blue-100);
+}
+
+.summary-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 312px;
+  padding: 18px 15px;
+  border-radius: 0.5rem;
+}
+
+.summary-name {
+  display: flex;
+  font-weight: 700;
+  gap: 1rem;
+}
+
+.summary-score {
+  display: flex;
+}
+
+.summary-score p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.summary-score span {
+  font-weight: 800;
+}
+
+.continue-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continue-button button {
+  border: 0;
+  outline: 0;
+  width: 312px;
+  padding: 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 2rem;
+  background: var(--Dark-gray-blue);
+  color: var(--White);
+  cursor: pointer;
+}
+
+.continue-button button:hover {
+  background: -webkit-linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+  transition: all 300ms ease-in;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.result-summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+
+@media screen and (min-width: 723px) {
+  .result-summary {
+    width: 724px;
+    height: 514px;
+    flex-direction: row;
+    box-shadow: 10px 10px 50px hsla(252, 100%, 67%, 0.425);
+  }
+}/*# sourceMappingURL=style.css.map */
